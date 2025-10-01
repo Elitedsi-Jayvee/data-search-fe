@@ -30,7 +30,7 @@ const reset = () =>{
     <div class="suggestions" >
       <em v-if="suggestionBox.length == 0"> Search for a vehicle...</em>
       <ul v-else>
-        <li v-for="(data,index) in suggestionBox" :key="index">{{  data }}</li>
+        <li v-for="(data,index) in suggestionBox" :key="index">{{  data.name }}</li>
       </ul>
     </div>
 
