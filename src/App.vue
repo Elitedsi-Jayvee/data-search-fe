@@ -15,15 +15,8 @@ const getSearch = debounce(async () => {
   const { data } = await axios.post(baseUri, { query: searchInput.value });
   const result = await data.suggestions;
   suggestionBox.value = result;
-  checkIfExist();
   if(searchInput.value.length === 0) reset();
 },500);
-
-const checkIfExist = () => {
-  let mainQuery = searchInput.value;
-  console.log(mainQuery);
-  
-}
 const reset = () =>{
   suggestionBox.value = [];
   
